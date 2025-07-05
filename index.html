@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>For My Love 💖</title>
+  <style>
+   body {
+  margin: 0;
+  padding: 0;
+  background: linear-gradient(to right, #ff9a9e, #fad0c4);
+  font-family: 'Segoe UI', sans-serif;
+  color: #fff;
+  text-align: center;
+  overflow-x: hidden; /* ✅ Prevents horizontal scroll only */
+}
+
+    h1 {
+      margin-top: 50px;
+      font-size: 3em;
+      animation: fadeIn 2s ease-in-out;
+    }
+
+    p {
+      font-size: 1.5em;
+      margin: 20px;
+      animation: fadeIn 3s ease-in-out;
+    }
+
+    .slideshow {
+      margin: 30px auto;
+      width: 80%;
+      max-width: 600px;
+      border-radius: 15px;
+      overflow: hidden;
+      box-shadow: 0 0 20px rgba(0,0,0,0.3);
+    }
+
+    .slideshow img {
+      width: 100%;
+      display: none;
+    }
+
+    .love-letter {
+      background: rgba(255, 255, 255, 0.2);
+      padding: 20px;
+      margin: 30px auto;
+      width: 80%;
+      max-width: 600px;
+      border-radius: 15px;
+      font-style: italic;
+      font-size: 1.2em;
+    }
+
+    .heart {
+      position: absolute;
+      width: 20px;
+      height: 20px;
+      background: red;
+      transform: rotate(45deg);
+      animation: float 6s infinite ease-in;
+    }
+
+    .heart::before,
+    .heart::after {
+      content: "";
+      position: absolute;
+      width: 20px;
+      height: 20px;
+      background: red;
+      border-radius: 50%;
+    }
+
+    .heart::before {
+      top: -10px;
+      left: 0;
+    }
+
+    .heart::after {
+      left: -10px;
+      top: 0;
+    }
+
+    @keyframes float {
+      0% {
+        transform: translateY(100vh) rotate(45deg);
+        opacity: 0;
+      }
+      50% {
+        opacity: 1;
+      }
+      100% {
+        transform: translateY(-10vh) rotate(45deg);
+        opacity: 0;
+      }
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; }
+      to { opacity: 1; }
+    }
+.mood-message {
+  background: rgba(255, 255, 255, 0.8);
+  color: #000;
+  padding: 20px;
+  margin: 30px auto;
+  width: 80%;
+  max-width: 700px;
+  border-radius: 15px;
+  font-size: 1.2em;
+  line-height: 1.6;
+  box-shadow: 0 0 15px rgba(0,0,0,0.1);
+}
+  </style>
+</head>
+<body>
+  <h1>To the Love of My Life 💕</h1>
+  <p>You are my sunshine, my moonlight, and all my stars. ✨</p>
+
+  <!-- Slideshow -->
+  <div class="slideshow">
+    <img src="file:///C:/Users/indra/OneDrive/Pictures/Ghibli/WhatsApp%20Image%202025-04-06%20at%2010.37.32_10fdbe4e.jpg" alt="Memory 1" style="display:block;">
+    <img src="file:///C:/Users/indra/OneDrive/Pictures/Ghibli/WhatsApp%20Image%202025-04-06%20at%2011.05.39_6eb83fdd.jpg" alt="Memory 2">
+    <img src="file:///C:/Users/indra/Downloads/WhatsApp%20Image%202025-07-05%20at%2019.15.53_b697d690.jpg" alt="Memory 3">
+  </div>
+
+  <!-- Love Letter -->
+  <div class="love-letter">
+    My dearest,<br><br>
+    Every moment with you feels like a dream I never want to wake up from.  
+    Your smile brightens my darkest days, and your love fills my heart with joy.  
+    This page is just a small token of how much you mean to me.  
+    I love you more than words can ever express. 💖 <br><br>
+<!-- Mood-Lifting Paragraph -->
+<div class="mood-message">
+  <p>
+    "My love,<br>
+I just want you to pause for a moment and remember how incredibly special you are. You light up my world in ways I never thought possible. Your smile is my favorite sunrise, your voice my favorite song, and your presence my peace. I know life can get overwhelming sometimes, but I want you to know that I’m always here — cheering for you, believing in you, and loving you more with every heartbeat. You don’t have to be perfect, you just have to be you — and that’s more than enough for me. 💖"
+
+Would you like to personalize it with her name or a specific memory you both share? I can tailor it into something even more magical. ✨
+ 
+    <br><br>Forever yours.
+  </div>
+
+  <!-- Background Music -->
+  <audio autoplay loop>
+    <source src="your-song.mp3" type="audio/mpeg">
+    Your browser does not support the audio element.
+  </audio>
+
+  <!-- Floating Hearts -->
+  <script>
+    for (let i = 0; i < 30; i++) {
+      let heart = document.createElement('div');
+      heart.className = 'heart';
+      heart.style.left = Math.random() * 100 + 'vw';
+      heart.style.animationDuration = (Math.random() * 3 + 3) + 's';
+      document.body.appendChild(heart);
+    }
+
+    // Slideshow logic
+    let slides = document.querySelectorAll('.slideshow img');
+    let index = 0;
+    setInterval(() => {
+      slides[index].style.display = 'none';
+      index = (index + 1) % slides.length;
+      slides[index].style.display = 'block';
+    }, 3000);
+  </script>
+</body>
+</html>
